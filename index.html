@@ -2,22 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElchinRR</title>
-</head>
-<body>  
-    <div class="container">
-        <h1>To-Do List</h1>
-        <div class="sort"></div>
-        <ul class="tasks"></ul>
-        <div class="content">
-            <input type="text" class="text" name="text" autofocus>
-            <div class="rmvBtn"></div>
-        </div>
-        <button class="button">Добавить</button>
-    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-top"></div>
+    <h1>To-do-list</h1>
+    <div class="sort"></div>
+
+    
+    <div class="inputDiv">
+        <div class="inputDivChild">
+        <input type="text" id="input" placeholder="əlavələr edin...">
+        <ul class="contentDiv">
+        </ul>
+    </div>
+        
+        
+    </div>
+    <button id="button"><span class="buttonPlus">+</span><p class="buttonAdd">add</p></button>
+</div>
     <script src="main.js"></script>
 </body>
 </html>
