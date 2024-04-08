@@ -8,6 +8,7 @@
     border-radius: 10px;
     width: 336px;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; 
 }
 .container-top {
     width: 100%;
@@ -16,6 +17,7 @@
     top: 0;
     left: 0;
     background: #FFDC40;
+    border-radius: 10px 10px 0 0;
 }
 h1{
     margin-top: 40px;
@@ -35,7 +37,7 @@ input{
 .inputDivChild{
     width: 300px;
     border: 1px solid #C4C4C4;
-    border-radius: 10PX;
+    border-radius: 10px;
     padding-left: 5px;
 }
 #button{
@@ -84,15 +86,14 @@ input{
 .deleteButton{
     cursor: pointer;
    color: black;
-    width: 50px;
+    width: 20px;
+    height: 20px;
 }
 
 .sort {
     margin-bottom: 12px;
     margin-left: 280px;
-    /* buna sonradan bax */
     cursor: pointer;
-    /* fill: #C4C4C4; */
     background: url(icons/sort-down.png);
     width: 25px;
     height: 15px;
@@ -101,4 +102,15 @@ input{
 .sort:hover {
     background: url(icons/sort-down-black.png);
     transition: 0.3s;
+}
+.deleteButton{
+    background: url(icons/cancel.png);
+    display: block;
+}
+.deleteButton:hover{
+    background: url(icons/cancel-hover.png);
+    transition: 0.3s;
+}
+.contentDiv{
+    padding: 0;
 }
