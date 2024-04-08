@@ -3,37 +3,43 @@ const input = document.getElementById('input');
 const button = document.getElementById('button');
 const contentDiv = document.querySelector('.contentDiv');
 const checkIcon = true;
-button.addEventListener('click', function go(){
+const deleteBtn = document.querySelector('.deleteBtn');
+button.addEventListener('click', ()=> {
     if(input.value !=""){
-    let paragraf = document.createElement('li');
-    let deleteButton = document.createElement('div');
+        let paragraf = document.createElement('li');
     paragraf.classList.add('paragraf');
-    deleteButton.classList.add('deleteButton');
-    paragraf.innerText = input.value;
     contentDiv.appendChild(paragraf);
+        let paragrafInText = document.createElement('p');
+        paragrafInText.classList.add('paragrafInText');
+    paragraf.appendChild(paragrafInText);
+    paragrafInText.innerHTML = input.value;
+    
+    let deleteButton = document.createElement('div');
+    deleteButton.classList.add('deleteBtn');
     paragraf.appendChild(deleteButton);
     input.value = "";
-    deleteButton.addEventListener('click', ()=>{
-        contentDiv.removeChild(paragraf);
-    })
-    
+    deleteButton.addEventListener('click', () => {
+        paragraf.remove();
+    });
 }
 else if (input.value.trim() === '') { 
-    alert("Zəhmət olmasa bir şeylər əlavə edin. Əks halda Boş yer açılmır");
-    
+    alert("Zəhmət olmasa bir şeylər əlavə edin. Əks halda Boş yer açılmır");  
 }
-})
+})       
+
+
 let sort = document.querySelector('.sort');
 let srt = 'sort-up';
 sort.addEventListener('click', sorting);
 function sorting(){
-    const paragraph = document.querySelectorAll('.paragraf');
+   
+    const paragraph = document.querySelectorAll('.paragrafInText');
     let arr = [];
     for (let i = 0; i < paragraph.length; i++) {
         arr[i] = paragraph[i].innerHTML;
     }
     if (srt == 'sort-up') {
-        srt = 'sort-down';
+        srt = 'sort-down'; 
         sort.style.background = 'url(icons/sort-up-black.png)';
         sort.addEventListener('mouseout', (e) => {
             e.style.background = 'url(icons/sort-up.png)';
@@ -67,10 +73,13 @@ function sorting(){
             if (a > b){
                 return -1;}
             return 0;
+            
         }  
     );
     }   
     for (let i = 0; i < paragraph.length; i++) {
         paragraph[i].innerHTML = arr[i];
+        
     }
+  
 }

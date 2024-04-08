@@ -1,4 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    font-family: "Roboto" , monospace;
+}
 .container{
     margin: auto;
     display: flex;
@@ -21,10 +24,8 @@
 }
 h1{
     margin-top: 40px;
-}
-.inputDiv{
-    display: flex;
-    flex-direction: column;
+    font-weight: 900;
+    font-size: 26px;
     
 }
 input{
@@ -35,6 +36,8 @@ input{
 }
 
 .inputDivChild{
+    display: flex;
+    flex-wrap: wrap;
     width: 300px;
     border: 1px solid #C4C4C4;
     border-radius: 10px;
@@ -49,7 +52,7 @@ input{
     border: 20px;
     background-color: #833AE0;
     border-radius: 50px;
-    transition: all 0.7s;
+    transition: 0.7s;
     margin-bottom: 20px;
     margin-top: 20px;
     cursor: pointer;
@@ -74,16 +77,19 @@ input{
 
 .buttonAdd {
     color: #fff;
-    font-family: "Roboto", sans-serif;
     margin: auto;
+   font-size: 14px;
 }
 
 .paragraf{
+    max-width: 290px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    overflow: hidden;
 }
-.deleteButton{
+.deleteBtn{
+ align-self: center;
     cursor: pointer;
    color: black;
     width: 20px;
@@ -103,11 +109,11 @@ input{
     background: url(icons/sort-down-black.png);
     transition: 0.3s;
 }
-.deleteButton{
+.deleteBtn{
     background: url(icons/cancel.png);
     display: block;
 }
-.deleteButton:hover{
+.deleteBtn:hover{
     background: url(icons/cancel-hover.png);
     transition: 0.3s;
 }
