@@ -18,7 +18,7 @@ button.addEventListener('click', function go(){
     })
     
 }
-else if (input.value.trim() === '') { // Eğer input alanının değeri boşsa
+else if (input.value.trim() === '') { 
     alert("Zəhmət olmasa bir şeylər əlavə edin. Əks halda Boş yer açılmır");
     
 }
@@ -44,10 +44,10 @@ function sorting(){
        
         // arr sort
         arr.sort((a, b) => {
-            if (a < b)
-                return -1;
-            if (a > b)
-                return 1;
+            if (a < b){
+                return -1;}
+            if (a > b){
+                return 1;}
             return 0;
             
         });
@@ -62,10 +62,10 @@ function sorting(){
             e.style.background = 'url(icons/sort-down-black.png)';
         }); 
         arr.sort((a, b) => {
-            if (a < b)
-                return 1;
-            if (a > b)
-                return -1;
+            if (a < b){
+                return 1;}
+            if (a > b){
+                return -1;}
             return 0;
         }  
     );
@@ -73,5 +73,4 @@ function sorting(){
     for (let i = 0; i < paragraph.length; i++) {
         paragraph[i].innerHTML = arr[i];
     }
-    
 }
