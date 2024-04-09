@@ -21,6 +21,10 @@ button.addEventListener('click', ()=> {
     deleteButton.addEventListener('click', () => {
         paragraf.remove();
     });
+    new Sortable(contentDiv,{
+        animation: 500,
+        ghostClass: "sortable-ghost"
+    })
 }
 else if (input.value.trim() === '') { 
     alert("Zəhmət olmasa bir şeylər əlavə edin. Əks halda Boş yer açılmır");  
@@ -49,14 +53,7 @@ function sorting(){
         });
        
         // arr sort
-        arr.sort((a, b) => {
-            if (a < b){
-                return -1;}
-            if (a > b){
-                return 1;}
-            return 0;
-            
-        });
+        arr.sort();
     }
     else {
         srt = 'sort-up';
@@ -67,15 +64,7 @@ function sorting(){
         sort.addEventListener('mouseover', (e) => {
             e.style.background = 'url(icons/sort-down-black.png)';
         }); 
-        arr.sort((a, b) => {
-            if (a < b){
-                return 1;}
-            if (a > b){
-                return -1;}
-            return 0;
-            
-        }  
-    );
+        arr.reverse();
     }   
     for (let i = 0; i < paragraph.length; i++) {
         paragraph[i].innerHTML = arr[i];
