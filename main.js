@@ -42,14 +42,14 @@ function sorting(){
     for (let i = 0; i < paragraph.length; i++) {
         arr[i] = paragraph[i].innerHTML;
     }
-    if (srt == 'sort-up') {
+    if (srt == 'sort-up')            {
         srt = 'sort-down'; 
         sort.style.background = 'url(icons/sort-up-black.png)';
         sort.addEventListener('mouseout', (e) => {
-            e.style.background = 'url(icons/sort-up.png)';
+            e.target.style.background = 'url(icons/sort-up.png)';
         });
         sort.addEventListener('mouseover', (e) => {
-            e.style.background = 'url(icons/sort-up-black.png)';
+            e.target.style.background = 'url(icons/sort-up-black.png)';
         });
        
         // arr sort
@@ -59,10 +59,10 @@ function sorting(){
         srt = 'sort-up';
         sort.style.background = 'url(icons/sort-down-black.png)';
         sort.addEventListener('mouseout', (e) => {
-            e.style.background = 'url(icons/sort-down.png)';
+            e.target.style.background = 'url(icons/sort-down.png)';
         });
         sort.addEventListener('mouseover', (e) => {
-            e.style.background = 'url(icons/sort-down-black.png)';
+            e.target.style.background = 'url(icons/sort-down-black.png)';
         }); 
         arr.reverse();
     }   
